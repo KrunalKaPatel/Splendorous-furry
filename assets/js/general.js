@@ -25,13 +25,11 @@ $(document).ready(function(){
 	});
 
 
-	/* Slider for Section*/
+	/* Slider for Banner Section*/
 	$('.slider').slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		arrow: false,
-		dots: false,
 		/*responsive: [
 			{
 				breakpoint: 768,
@@ -48,5 +46,34 @@ $(document).ready(function(){
 				}
 			}
 		]*/
+	});
+
+	$('.project-slider').slick({
+		infinite: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 776,
+				settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 488,
+				settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 383,
+				settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				}
+			}
+		]
 	});
 });
