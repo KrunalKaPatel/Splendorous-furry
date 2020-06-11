@@ -30,11 +30,11 @@ $(document).ready(function(){
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		/*responsive: [
+		responsive: [
 			{
-				breakpoint: 768,
+				breakpoint: 773,
 				settings: {
-				slidesToShow: 2,
+				slidesToShow: 3,
 				slidesToScroll: 1,
 				}
 			},
@@ -45,7 +45,7 @@ $(document).ready(function(){
 				slidesToScroll: 1,
 				}
 			}
-		]*/
+		]
 	});
 
 	$('.project-slider').slick({

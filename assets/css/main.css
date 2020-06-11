@@ -63,7 +63,7 @@ body
 .header
 {
 	border-bottom: 1px solid #e6e6e6;
-	margin-bottom: 50px;
+	margin-bottom: 42px;
 }
 .header h6
 {
@@ -131,6 +131,7 @@ body
 .active
 {
 	background-color: #7e5c88;
+	color: #fff !important;
 }
 .pageHeader .menu ul li a:hover
 {
@@ -215,6 +216,28 @@ body
 	display: flex;
 	justify-content: center;
 }
+.banner-slider button.slick-arrow 
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-75px,-50%);
+    width: 30px;
+    height: 40px;
+    background: url(../images/arrow.png) no-repeat center;
+    background-size: 20px;
+    text-indent: 1000px;
+    overflow: hidden;
+    border: 0;
+    z-index: 10;
+    outline: none;
+}
+.banner-slider button.slick-next.slick-arrow 
+{
+    left: inherit;
+    right: 0;
+    transform: translate(75px,-50%) rotate(180deg);
+}
 .banner-slider .banner-caption h1
 {
 	font-size: 46px;
@@ -245,19 +268,19 @@ body
 .banner-slider .banner-image
 {
 	width: 430px;
-	height: 410px;
-	border-radius: 50%;
-	border: 20px solid #7e5c88;
-	position: relative;
+    height: 430px;
+    border-radius: 50%;
+    border: 20px solid #7e5c88;
+    position: relative;
+    overflow: hidden;
 }
 .banner-slider .banner-image figure img
 {
 	position: absolute;
-    top: 0;
-    left: 0;
-    width: 391px;
-    height: 371px;
-    border-radius: 180px;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
 }
 
 
@@ -267,7 +290,7 @@ body
 .project-bg
 {
 	width: 100%;
-	padding: 50px 0px;
+	padding: 56px 0px;
 	padding-bottom: 10px;
 	display: flex;
 	justify-content: center;
@@ -344,6 +367,7 @@ body
 	padding: 50px 0px;
 	display: flex;
 	justify-content: center;
+	padding-bottom: 40px;
 	border-bottom: 1px solid #e0e0e0;
 }
 .blog-about-bg .container
@@ -362,6 +386,7 @@ body
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0px -10px;
+	margin-top: -3px;
 }
 .blog-about-bg .blogs .display-33
 {
@@ -410,13 +435,13 @@ body
 .blog-about-bg .about .about-member .member figure
 {
 	border: 1px solid #d8d8d8; 
-	width: 60px;
-	height: 60px;
+	width: 67px;
+	height: 67px;
 	margin-right: 10px; 
 }
 .blog-about-bg .about .about-member .member figure img
 {
-	height: 58px;
+	height: 65px;
 	padding: 5px;
 	display: flex;
 }
@@ -454,7 +479,7 @@ body
 
 .top-footer
 {
-	padding: 50px 0px;
+	padding: 48px 0px;
 	display: flex;
 	justify-content: center;
 	border-bottom: 1px solid #e0e0e0;
@@ -463,7 +488,7 @@ body
 {
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0px 0px 0px -10px; 
+	margin: 0px 0px 0px -20px; 
 }
 .top-footer .display-25
 {
@@ -476,7 +501,8 @@ body
 	line-height: 14px;
 	color: #979797;
 	text-transform: uppercase;
-	margin-bottom: 50px;
+	margin-bottom: 35px;
+	letter-spacing: 1px;
 }
 .top-footer .tweets h4
 {
@@ -490,14 +516,15 @@ body
 	font-size: 11px;
 	line-height: 13px;
 	color: #979797;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	letter-spacing: 1px;
 }
 .top-footer .tweets p
 {
 	font-size: 12px;
 	line-height: 19px;
 	color: #979797;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 .top-footer .tweets a
 {
@@ -549,21 +576,21 @@ body
 }
 .top-footer .social-links a
 {
-	margin-bottom: 5px;
+	margin-bottom: 15px;
 	color: #7e5b87;
-	padding-bottom: 10px;
+	padding-bottom: 7px;
 	border-bottom: 1px solid #e0e0e0;
 }
 .top-footer .social-links a i
 {
-	height: 35px;
-	width: 35px;
+	height: 32px;
+	width: 32px;
 	border-radius: 50%;
-	padding: 8px;
+	padding: 6px 0px 0px 8px;
 	background-color: #c3c3c3;
 	color: #fff;
 	font-size: 20px;
-	margin-right: 10px;
+	margin-right: 14px;
 }
 .top-footer .social-links a:hover i
 {
@@ -590,6 +617,14 @@ body
 	line-height: 12px;
 	color: #979797;
 }
+.pageFooter .bottom-footer p a
+{
+	color: #979797;
+}
+.pageFooter .bottom-footer p a:hover
+{
+	color: #7e5b87;
+}
 
 /* Media Queries
 ------------------------------*/
@@ -603,6 +638,19 @@ body
 	.pageHeader i
 	{
 		display: block;
+	}
+
+	.banner-bg .banner-slider .item
+	{
+		padding: 0px 25px;
+	}
+	.banner-slider button.slick-arrow
+	{
+		transform: translate(-25px,-50%);
+	}
+	.banner-slider button.slick-next.slick-arrow
+	{
+		transform: translate(25px,-50%) rotate(180deg);
 	}
 	.pageHeader .logo
 	{
@@ -711,19 +759,26 @@ body
 
 @media(max-width: 375px)
 {
+	.banner-slider .banner-caption h1
+	{
+		font-size: 20px;
+		line-height: 20px;
+	}
+	.banner-slider .banner-caption a
+	{
+		font-size: 12px;
+		width: 100%;
+	}
 	.banner-slider .banner-image 
 	{
-	    width: 190px;
-	    height: 170px;
+	    width: 150px;
+	    height: 150px;
+	    border: 10px solid #7e5c88;
 	}
 	.banner-slider .banner-image figure img 
 	{
 	    width: 201px;
 	    height: 131px;
-	}
-	.banner-slider .banner-caption a 
-	{
-    	width: 90%;
 	}
 }
 @media(max-width: 320px)
