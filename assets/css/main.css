@@ -224,12 +224,23 @@ body
 {
 	flex-direction: column;
 	text-align: center;
+	transition: 0.5s all;
+}
+.project-bg .project-card .display-25:hover{
+	transform: scale(1.1);
+}
+.project-bg .project-card .display-25:hover .upper-text{
+	background-color: yellow;
+}
+.project-bg .project-card .display-25:hover .lower-text{
+	background-color: yellow;
 }
 .project-bg .project-card .display-25 .upper-text,.lower-text
 {
 	background-color: #eeeeee;
 	padding: 10px 0px;
 	width: 93.8%;
+	transition: 0.5s all;
 }
 .project-bg .project-card .display-25 .upper-text h5
 {
@@ -244,10 +255,10 @@ body
 	display: flex;
 	transition: all 0.5s ease;
 }
-.project-bg .project-card figure img:hover
+/* .project-bg .project-card figure img:hover
 {
 	transform: scale(1.1);
-}
+} */
 .project-bg .project-card .display-25 .lower-text h4
 {
 	font-size: 12px;
@@ -274,7 +285,7 @@ body
 .blog-about-bg .container
 {
 	display: flex;
-	margin: 0px -20px;
+	margin: 0px 0px 0px -20px;
 }
 .blog-about-bg .blogs
 {
