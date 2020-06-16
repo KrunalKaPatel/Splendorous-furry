@@ -61,9 +61,16 @@ $(document).ready(function(){
 				}
 			},
 			{
-				breakpoint: 488,
+				breakpoint: 680,
 				settings: {
 				slidesToShow: 2,
+				slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 488,
+				settings: {
+				slidesToShow: 1,
 				slidesToScroll: 1,
 				}
 			},
